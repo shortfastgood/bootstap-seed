@@ -1,8 +1,8 @@
 # bootstap-seed
 Bootstrap integrated into Angular-Seed
 
-[![Angular Seed](https://github.com/mgechev/angular-seed)
-[![Bootstrap](https://github.com/twbs/bootstrap)
+[Angular Seed](https://github.com/mgechev/angular-seed)
+[Bootstrap](https://github.com/twbs/bootstrap)
 
 ## General Information
 This project is a merge of Angular-Seed seed with Bootstrap. Bootstrap is used as is without any attempt to migrate it to Angular 2.
