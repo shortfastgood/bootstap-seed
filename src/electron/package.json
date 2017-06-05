@@ -1,0 +1,5 @@
+{
+  "name" : "bootstrap-seed-electron",
+  "version" : "1.0.0",
+  "main"    : "electron.js"
+}

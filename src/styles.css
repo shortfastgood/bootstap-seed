@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+.bs-docs-nav {
+  background-color: #fff;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.bs-nav {
+  background-color: #fff;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+/*
+ * Docs sections
+ *
+ * Content blocks for each component or feature.
+ */
+
+/* Space things out */
+.bs-docs-section {
+  margin-bottom: 60px;
+}
+.bs-docs-section:last-child {
+  margin-bottom: 0;
+}
+
+h1[id] {
+  padding-top: 20px;
+  margin-top: 0;
+}
+
+/*
+ * Glyphicons
+ *
+ * Special styles for displaying the icons and their classes in the docs.
+ */
+
+.bs-icons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.bs-icons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.bs-icons li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  padding: 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #fff;
+}
+.bs-icons img {
+  height: 65px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.bs-icons .icon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.bs-icons li:hover {
+  color: #fff;
+  background-color: #563d7c;
+}
+
+@media (min-width: 768px) {
+  .bs-icons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .bs-icons li {
+    width: 12.5%;
+    font-size: 12px;
+  }
+}
