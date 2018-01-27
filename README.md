@@ -16,3 +16,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Release
 
 **0.1** The navigation bar.
+**0.11** Dependencies upgrade.
