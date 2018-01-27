@@ -6,7 +6,7 @@ Bootstrap integrated into Angular-CLI and Electron
 - [Electron](https://electron.atom.io/)
 
 ## General Information
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Documentation
 
