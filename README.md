@@ -20,3 +20,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 **0.11** Dependencies upgrade.
 
 **0.12** Dependencies upgrade.
+
+**0.13** Dependencies upgrade. Angular 8
