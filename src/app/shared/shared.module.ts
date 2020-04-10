@@ -13,7 +13,7 @@ import { NavbarComponent }               from './navbar/navbar.component';
   exports: [NavbarComponent]
 })
 export class SharedModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: []

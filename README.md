@@ -24,3 +24,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 **0.13** Dependencies upgrade. Angular 8
 
 **0.13.1** Vulnerabilities fixed.
+
+**0.14** Dependencies upgrade. Angular 9
