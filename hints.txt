@@ -1,0 +1,12 @@
+# Angular
+https://angular.io/guide/reactive-forms#creating-dynamic-forms
+
+# CSS
+https://css-tricks.com/the-shapes-of-css/
+
+# Electron
+https://www.sitepoint.com/build-a-desktop-application-with-electron-and-angular/
+https://github.com/electron-userland/electron-builder
+https://www.electron.build/#boilerplates
+
+

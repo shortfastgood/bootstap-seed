@@ -1,28 +1,36 @@
-# bootstap-seed
-Bootstrap integrated into Angular-CLI and Electron
+# BootstrapSeed 2.0
 
-- [Angular Seed](https://github.com/mgechev/angular-seed)
-- [Bootstrap](https://github.com/twbs/bootstrap)
-- [Electron](https://electron.atom.io/)
+The project is an application template in which some features of general interest have been included.
 
-## General Information
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+The template was generated with [Angular CLI](https://cli.angular.io) version 10.1.2. 
+Later, [jQuery](https://jquery.com) and [Bootstrap](https://getbootstrap.com/) were integrated and used 
+as the basis for the graphics.
 
-## Documentation
+## Build
 
-- [Build & Deploy Angular 4 Projects](http://shortfastgood.blogspot.ch/2017/06/build-deploy-angular-4-projects.html)
-- [Project Migration to Angular 2: Bootstrap Part 2](http://shortfastgood.blogspot.com/2017/01/project-migration-to-angular-2.html)
+The current version of the project was developed usind NodeJS 14.11. After cloning use `npm install` to get 
+all dependencies and `npm run build` to compile everything.
 
-## Release
+## Run
+The command `npm run start` starts the development server. The application wil be available at 
+[http://localhost:4200]().
 
-**0.1** The navigation bar.
+### Run as Electron Destop Application
 
-**0.11** Dependencies upgrade.
+#### MAC
 
-**0.12** Dependencies upgrade.
+The command `npm run mac:electron` compiles the application and run it as electron based desktop application.
 
-**0.13** Dependencies upgrade. Angular 8
+#### Windows
 
-**0.13.1** Vulnerabilities fixed.
+The command `npm run win:electron` compiles the application and run it as electron based desktop application.
 
-**0.14** Dependencies upgrade. Angular 9
+## Advertissements Section
+
+This section is a revisited version of the 
+[dynamic component loader](https://angular.io/guide/dynamic-component-loader) example.
+
+## Alerts
+
+The alerts page uses the same priciple as the advertissemets to display messages and alerts 
+using as less space as possible.

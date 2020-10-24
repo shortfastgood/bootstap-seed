@@ -1,0 +1,4 @@
+<div class="{{data.class}}" role="alert">
+  <span class="alert-text">{{data.body}}</span>
+  <button *ngIf="dismissable" type="button" class="close" (click)="dismissAlert(id)"><span>&times;</span></button>
+</div>

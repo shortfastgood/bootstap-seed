@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  padding-top: 60px;
+}
+h1, h2 {
+  font-weight: 300;
+}
+h1:first-child {
+  padding-top: 20px;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  input {
+    font-size: 0.75rem;
+  }
+  .btn {
+    font-size: 0.75rem;
+  }
+  .dropdown-item {
+    font-size: 0.75rem;
+  }
+  .input-group-text {
+    font-size: 0.75rem;
+  }
+  .lead {
+    font-size: 0.75rem;
+  }
+}
+.button-dark {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  color: white;
+}
+.button-dark:hover {
+  background-color: #444A50;
+  cursor: pointer;
+}
+.button-danger {
+  background-color: var(--danger);
+  border-color: var(--danger);
+  color: white;
+}
+.button-danger:hover {
+  background-color: #EC4555;
+  cursor: pointer;
+}
+.button-info {
+  background-color: var(--info);
+  border-color: var(--info);
+  color: white;
+}
+.button-info:hover {
+  background-color: #27B2C8;
+  cursor: pointer;
+}
+.button-light {
+  background-color: var(--light);
+  border-color: var(--light);
+  color: black;
+}
+.button-light:hover {
+  background-color: #E8E9EA;
+  cursor: pointer;
+}
+.button-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.button-primary:hover {
+  background-color: #108bff;
+  cursor: pointer;
+}
+.button-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}
+.button-secondary:hover {
+  background-color: #7C858D;
+  cursor: pointer;
+}
+.button-success {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+.button-success:hover {
+  background-color: #38B755;
+  cursor: pointer;
+}
+.button-warning {
+  background-color: var(--warning);
+  border-color: var(--warning);
+  color: black;
+}
+.button-warning:hover {
+  background-color: #FFD117;
+  cursor: pointer;
+}
+.square-green-12 {
+  background: #00D000;
+  height: 12px;
+  width: 12px;
+}
+.square-red-12 {
+  background: red;
+  height: 12px;
+  width: 12px;
+}
+.option-button {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.option-button-indicator {
+  flex: 1 1 auto;
+  padding-top: 5px;
+}
+.option-button .option-button-text {
+  flex: 1 1 auto;
+  padding-left: 5px;
+}
+.validation-text {
+  padding: 8px 10px;
+}

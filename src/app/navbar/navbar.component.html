@@ -1,0 +1,25 @@
+<nav class="app-navbar navbar fixed-top">
+  <a class="navbar-brand" [routerLink]="['/']">Bootstrap Seed</a>
+  <div class="navbar-large justify-content-end navbar-nav">
+    <div class="d-flex flex-row">
+      <a class="nav-item nav-link" [routerLink]="['/ad']" [routerLinkActive]="['router-link-active']">Advertissements</a>
+      <a class="nav-item nav-link" [routerLink]="['/alert']" [routerLinkActive]="['router-link-active']">Alerts</a>
+    </div>
+  </div>
+  <div class="navbar-small justify-content-end navbar-nav">
+    <button type="button" class="menu-toggler" (click)="switchSmallMenuState()">
+      <span class="menu-icon">
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+        <span class="menu-icon-line"></span>
+      </span>
+    </button>
+  </div>
+  <div class="navbar-small menu-break"></div>
+  <div [ngClass]="smallMenuClass">
+    <a class="nav-link menu-item" [routerLink]="['/ad']" [routerLinkActive]="['router-link-active']" (click)="hideSmallMenu()">Advertissements</a>
+    <a class="nav-link menu-item" [routerLink]="['/alert']" [routerLinkActive]="['router-link-active']" (click)="hideSmallMenu()">Alerts</a>
+  </div>
+</nav>

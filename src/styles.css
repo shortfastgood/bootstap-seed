@@ -1,81 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
-.bs-docs-nav {
-  background-color: #fff;
-  border-bottom: 0;
-  margin-bottom: 0;
+/* Global Styles */
+:root {
+  --nav-background: #20272a;
 }
-.bs-nav {
-  background-color: #fff;
-  border-bottom: 0;
-  margin-bottom: 0;
-}
-
-/*
- * Docs sections
- *
- * Content blocks for each component or feature.
- */
-
-/* Space things out */
-.bs-docs-section {
-  margin-bottom: 60px;
-}
-.bs-docs-section:last-child {
-  margin-bottom: 0;
-}
-
-h1[id] {
-  padding-top: 20px;
-  margin-top: 0;
-}
-
-/*
- * Glyphicons
- *
- * Special styles for displaying the icons and their classes in the docs.
- */
-
-.bs-icons {
-  margin: 0 -10px 20px;
-  overflow: hidden;
-}
-.bs-icons-list {
-  padding-left: 0;
-  list-style: none;
-}
-.bs-icons li {
-  float: left;
-  width: 25%;
-  height: 115px;
-  padding: 10px;
-  font-size: 10px;
-  line-height: 1.4;
-  text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #fff;
-}
-.bs-icons img {
-  height: 65px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-.bs-icons .icon-class {
+:host {
   display: block;
-  text-align: center;
-  word-wrap: break-word; /* Help out IE10+ with class names */
+  padding: 60px 0;
 }
-.bs-icons li:hover {
-  color: #fff;
-  background-color: #563d7c;
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+h2, h3, h4 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #333;
+  font-family: Cambria, Georgia, sans-serif;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+.app-example-section {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+/* Echo out a label for the example */
+.app-example-section:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "Example";
+}
+button {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
 }
 
-@media (min-width: 768px) {
-  .bs-icons {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .bs-icons li {
-    width: 12.5%;
-    font-size: 12px;
-  }
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }

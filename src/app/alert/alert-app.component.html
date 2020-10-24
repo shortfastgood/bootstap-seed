@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>Alerts</h1>
+      <p class="lead">The problem to be solved is to inform the user of events that require a certain attention using little space.</p>
+      <div class="app-example-section">
+        <h4>Looping alerts</h4>
+        <div class="row">
+          <div class="col-12">
+            <app-alert-holder [currentAlertIndex]="currentAlertIndex" [delay]="optionDelay" [items]="items" [optionDismissable]="optionDismissable"></app-alert-holder>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-12">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-item button-dark" (click)="addDarkAlert()">add dark alert</div>
+                  <div class="dropdown-item button-danger" (click)="addDangerAlert()">add danger alert</div>
+                  <div class="dropdown-item button-info" (click)="addInfoAlert()">add info alert</div>
+                  <div class="dropdown-item button-light" (click)="addLightAlert()">add light alert</div>
+                  <div class="dropdown-item button-primary" (click)="addPrimaryAlert()">add primary alert</div>
+                  <div class="dropdown-item button-secondary" (click)="addSecondaryAlert()">add secondary alert</div>
+                  <div class="dropdown-item button-success" (click)="addSuccessAlert()">add success alert</div>
+                  <div class="dropdown-item button-warning" (click)="addWarningAlert()">add warning alert</div>
+                </div>
+              </div>
+              <input type="text" class="form-control" [formControl]="message" placeholder="type the new message">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-4">
+            <div class="input-group mb-3 ">
+              <button class="btn btn-outline-secondary" type="button" (click)="delayChanged()">Change</button>
+              <div class="input-group-prepend">
+                <span class="input-group-text">delay (ms)</span>
+              </div>
+              <input type="text" class="form-control" [formControl]="delay" (change)="delayChanged()">
+              <span class="text-danger validation-text" *ngIf="delay.invalid">
+                A number &gt; 1000 is required here!
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-4">
+            <div class="btn-group mr-2">
+              <button class="btn btn-outline-secondary option-button" (click)="dismissableSwitch()">
+                <div class="option-button-indicator">
+                  <div [ngClass]="{'square-green-12': optionDismissable, 'square-red-12': !optionDismissable}"></div>
+                </div>
+                <div class="option-button-text">dismissable</div>
+              </button>
+              <button class="btn btn-outline-secondary" (click)="removeAll()">remove all</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

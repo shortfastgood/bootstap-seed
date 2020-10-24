@@ -1,5 +1,6 @@
 {
-  "name" : "bootstrap-seed-electron",
-  "version" : "1.0.0",
-  "main"    : "electron.js"
+  "name"        : "bootstrap-seed",
+  "productName" : "Bootstrap Seed",
+  "version"     : "2.0.0",
+  "main"        : "electron.js"
 }

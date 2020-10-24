@@ -1,22 +1,12 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { CommonModule }                  from '@angular/common';
-import { RouterModule }                  from '@angular/router';
-
-import { NavbarComponent }               from './navbar/navbar.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BroadcastService } from './broadcast.service';
 
 @NgModule({
+  declarations: [],
   imports: [
-    CommonModule,
-    RouterModule
+    CommonModule
   ],
-  declarations: [NavbarComponent],
-  exports: [NavbarComponent]
+  providers: [BroadcastService]
 })
-export class SharedModule {
-  static forRoot(): ModuleWithProviders<SharedModule> {
-    return {
-      ngModule: SharedModule,
-      providers: []
-    }
-  }
-}
+export class SharedModule { }

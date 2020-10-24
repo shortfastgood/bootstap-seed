@@ -1,0 +1,105 @@
+nav a.navbar-brand {
+  background-color: var(--nav-background);
+  color: var(--teal);
+  font-size: 1.8rem;
+  font-weight:400;
+  line-height: 1;
+  margin-right: 20px;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  nav a.navbar-brand {
+    font-size: 1.5em;
+    margin-right: 5px;
+  }
+}
+nav a.navbar-brand:hover {
+  color: var(--teal);
+}
+nav a {
+  background-color: var(--nav-background);
+  color: #9f9f9f;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-right: 20px;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  nav a {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+}
+nav a:hover {
+  color: #cfd8dc;
+}
+nav a i {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+nav a.router-link-active {
+  color: var(--teal);
+}
+.app-navbar {
+  background-color: var(--nav-background);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+}
+.app-navbar .hide-small-menu {
+  display: none;
+}
+.app-navbar .navbar-large {
+  display: none;
+}
+@media (min-width: 800px) {
+  .app-navbar .navbar-large {
+    display: flex !important;
+  }
+}
+.app-navbar .navbar-small {
+  display: none;
+}
+@media (max-width: 799px) {
+  .app-navbar .navbar-small {
+    display: flex !important;
+  }
+}
+.app-navbar .menu-break {
+  flex-basis: 100%;
+  height: 0;
+}
+.app-navbar .menu-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+.app-navbar .menu-icon .menu-icon-line {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 0.15em;
+  padding: 0;
+  width: 1.5em;
+  vertical-align: top;
+}
+.app-navbar .menu-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 0.3em;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.app-navbar .menu-item {
+  min-width: 800px;
+}
+
