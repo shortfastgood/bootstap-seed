@@ -2,6 +2,7 @@
   "name": "bootstrap-seed",
   "version": "2.0.0",
   "license": "MIT",
+  "main": "src/electron.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,19 +17,23 @@
     "win:jquery": "copy node_modules\\jquery\\dist\\jquery.min.js src\\assets\\js",
     "win:build": "npm run win:jquery && ng build --base-href ./ && xcopy /S /Y src\\electron\\* dist",
     "win:electron": "npm run mac:build && electron dist\\electron.js",
-    "win:pack": "npm run win:build && electron-packager . --overwrite"
+    "win:pack": "npm run win:build && electron-packager . --overwrite",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~10.1.2",
-    "@angular/common": "~10.1.2",
-    "@angular/compiler": "~10.1.2",
-    "@angular/core": "~10.1.2",
-    "@angular/forms": "~10.1.2",
-    "@angular/platform-browser": "~10.1.2",
-    "@angular/platform-browser-dynamic": "~10.1.2",
-    "@angular/router": "~10.1.2",
+    "@angular/animations": "~11.0.5",
+    "@angular/common": "~11.0.5",
+    "@angular/compiler": "~11.0.5",
+    "@angular/core": "~11.0.5",
+    "@angular/forms": "~11.0.5",
+    "@angular/platform-browser": "~11.0.5",
+    "@angular/platform-browser-dynamic": "~11.0.5",
+    "@angular/router": "~11.0.5",
     "bootstrap": "^4.5.2",
+    "bootstrap-icons": "^1.2.2",
+    "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
@@ -37,18 +42,22 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1002.0",
-    "@angular/cli": "~10.1.2",
-    "@angular/compiler-cli": "~10.1.2",
-    "@types/jasmine": "~3.5.0",
+    "@angular-devkit/build-angular": "^0.1100.5",
+    "@angular/cli": "~11.0.5",
+    "@angular/compiler-cli": "~11.0.5",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "electron": "^10.1.4",
-    "electron-packager": "^15.1.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.0.0",
+    "karma": "~5.1.1",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
@@ -57,5 +66,32 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "bootstrap_seed"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }

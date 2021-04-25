@@ -4,6 +4,7 @@
     <div class="d-flex flex-row">
       <a class="nav-item nav-link" [routerLink]="['/ad']" [routerLinkActive]="['router-link-active']">Advertissements</a>
       <a class="nav-item nav-link" [routerLink]="['/alert']" [routerLinkActive]="['router-link-active']">Alerts</a>
+      <a class="nav-item nav-link" [routerLink]="['/ipc']" [routerLinkActive]="['router-link-active']">IPC</a>
     </div>
   </div>
   <div class="navbar-small justify-content-end navbar-nav">
@@ -21,5 +22,6 @@
   <div [ngClass]="smallMenuClass">
     <a class="nav-link menu-item" [routerLink]="['/ad']" [routerLinkActive]="['router-link-active']" (click)="hideSmallMenu()">Advertissements</a>
     <a class="nav-link menu-item" [routerLink]="['/alert']" [routerLinkActive]="['router-link-active']" (click)="hideSmallMenu()">Alerts</a>
+    <a class="nav-link menu-item" [routerLink]="['/ipc']" [routerLinkActive]="['router-link-active']" (click)="hideSmallMenu()">IPC</a>
   </div>
 </nav>

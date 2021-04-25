@@ -31,3 +31,14 @@ h1:first-child {
     font-size: 0.75rem;
   }
 }
+.btn-collapsible {
+  fill: white;
+  text-align: left;
+}
+.triangle-right-shape {
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid var(--teal);
+  border-top: 4px solid transparent;
+  height: 0;
+  width: 0;
+}

@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AlertModule} from './shared/alert/alert.module';
 import {AdModule} from './shared/ad/ad.module';
 import {HomeModule} from './home/home.module';
+import {IpcModule} from './ipc/ipc.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {HomeModule} from './home/home.module';
     AppRoutingModule,
     BrowserModule,
     HomeModule,
+    IpcModule,
     ReactiveFormsModule,
     SharedModule
   ],

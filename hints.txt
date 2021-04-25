@@ -5,7 +5,7 @@ https://angular.io/guide/reactive-forms#creating-dynamic-forms
 https://css-tricks.com/the-shapes-of-css/
 
 # Electron
-https://www.sitepoint.com/build-a-desktop-application-with-electron-and-angular/
+npx
 https://github.com/electron-userland/electron-builder
 https://www.electron.build/#boilerplates
 
