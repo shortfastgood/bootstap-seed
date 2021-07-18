@@ -37,7 +37,7 @@ h1:first-child {
 }
 .triangle-right-shape {
   border-bottom: 4px solid transparent;
-  border-left: 8px solid var(--teal);
+  border-left: 8px solid var(--bs-teal);
   border-top: 4px solid transparent;
   height: 0;
   width: 0;

@@ -1,6 +1,6 @@
 nav a.navbar-brand {
   background-color: var(--nav-background);
-  color: var(--teal);
+  color: var(--bs-teal);
   font-size: 1.8rem;
   font-weight:400;
   line-height: 1;
@@ -16,7 +16,7 @@ nav a.navbar-brand {
   }
 }
 nav a.navbar-brand:hover {
-  color: var(--teal);
+  color: var(--bs-teal);
 }
 nav a {
   background-color: var(--nav-background);
@@ -44,7 +44,7 @@ nav a i {
   line-height: 1;
 }
 nav a.router-link-active {
-  color: var(--teal);
+  color: var(--bs-teal);
 }
 .app-navbar {
   background-color: var(--nav-background);
