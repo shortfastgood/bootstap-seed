@@ -1,5 +1,4 @@
 import {Component, ComponentFactoryResolver, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild} from '@angular/core';
-import {Subscription} from 'rxjs';
 
 import {AlertDirective} from './alert-directive';
 import {ALERT_LOOP_DEFAULT_DELAY, ALERT_LOOP_RESET_VALUE, AnyAlertComponent, AnyAlertItem} from './alert';
@@ -22,11 +21,9 @@ export class AlertHolderComponent implements OnChanges, OnDestroy, OnInit {
 
   @Input() optionDismissable: boolean;
 
-  eventsSubcription: Subscription;
+  @Input() items: AnyAlertItem[];
 
   interval: any;
-
-  @Input() items: AnyAlertItem[];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
   }

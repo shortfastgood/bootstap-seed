@@ -16,11 +16,12 @@ import {AnyAdComponent, AnyAdItem} from './ad';
   `
 })
 export class AdBannerComponent implements OnDestroy, OnInit{
+
+  @ViewChild(AdDirective, {static: true}) appAdHost: AdDirective;
+
   @Input() ads: AnyAdItem[];
 
   currentAdIndex = -1;
-
-  @ViewChild(AdDirective, {static: true}) appAdHost: AdDirective;
 
   interval: any;
 

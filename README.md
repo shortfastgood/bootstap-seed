@@ -34,3 +34,7 @@ This section is a revisited version of the
 
 The alerts page uses the same principle as the advertisements to display messages and alerts 
 using as less space as possible.
+
+# BootstrapSeed 2.1
+
+
