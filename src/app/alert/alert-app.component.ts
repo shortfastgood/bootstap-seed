@@ -24,7 +24,7 @@ export class AlertAppComponent implements OnDestroy, OnInit {
 
   optionDelay = ALERT_LOOP_DEFAULT_DELAY;
 
-  optionDismissable: boolean;
+  optionDismissible: boolean;
 
   subscription: Subscription;
 
@@ -76,8 +76,8 @@ export class AlertAppComponent implements OnDestroy, OnInit {
     }
   }
 
-  dismissableSwitch(): void {
-    this.optionDismissable = !this.optionDismissable;
+  dismissibleSwitch(): void {
+    this.optionDismissible = !this.optionDismissible;
   }
 
   handleEvents(event: BroadcastEvent): void {

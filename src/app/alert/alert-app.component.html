@@ -7,25 +7,23 @@
         <h4>Looping alerts</h4>
         <div class="row">
           <div class="col-12">
-            <app-alert-holder [currentAlertIndex]="currentAlertIndex" [delay]="optionDelay" [items]="items" [optionDismissable]="optionDismissable"></app-alert-holder>
+            <app-alert-holder [currentAlertIndex]="currentAlertIndex" [delay]="optionDelay" [items]="items" [optionDismissible]="optionDismissible"></app-alert-holder>
           </div>
         </div>
         <div class="row">
           <div class="col col-md-12">
             <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
-                <div class="dropdown-menu">
-                  <div class="dropdown-item button-dark" (click)="addDarkAlert()">add dark alert</div>
-                  <div class="dropdown-item button-danger" (click)="addDangerAlert()">add danger alert</div>
-                  <div class="dropdown-item button-info" (click)="addInfoAlert()">add info alert</div>
-                  <div class="dropdown-item button-light" (click)="addLightAlert()">add light alert</div>
-                  <div class="dropdown-item button-primary" (click)="addPrimaryAlert()">add primary alert</div>
-                  <div class="dropdown-item button-secondary" (click)="addSecondaryAlert()">add secondary alert</div>
-                  <div class="dropdown-item button-success" (click)="addSuccessAlert()">add success alert</div>
-                  <div class="dropdown-item button-warning" (click)="addWarningAlert()">add warning alert</div>
-                </div>
-              </div>
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Actions</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="addDarkAlert()">add dark alert</a></li>
+                <li><a class="dropdown-item" (click)="addDangerAlert()">add danger alert</a></li>
+                <li><a class="dropdown-item" (click)="addInfoAlert()">add info alert</a></li>
+                <li><a class="dropdown-item" (click)="addLightAlert()">add light alert</a></li>
+                <li><a class="dropdown-item" (click)="addPrimaryAlert()">add primary alert</a></li>
+                <li><a class="dropdown-item" (click)="addSecondaryAlert()">add secondary alert</a></li>
+                <li><a class="dropdown-item" (click)="addSuccessAlert()">add success alert</a></li>
+                <li><a class="dropdown-item" (click)="addWarningAlert()">add warning alert</a></li>
+             </ul>
               <input type="text" class="form-control" [formControl]="message" placeholder="type the new message">
             </div>
           </div>
@@ -47,11 +45,11 @@
         <div class="row">
           <div class="col col-md-4">
             <div class="btn-group mr-2">
-              <button class="btn btn-outline-secondary option-button" (click)="dismissableSwitch()">
+              <button class="btn btn-outline-secondary option-button" (click)="dismissibleSwitch()">
                 <div class="option-button-indicator">
-                  <div [ngClass]="{'square-green-12': optionDismissable, 'square-red-12': !optionDismissable}"></div>
+                  <div [ngClass]="{'square-green-12': optionDismissible, 'square-red-12': !optionDismissible}"></div>
                 </div>
-                <div class="option-button-text">dismissable</div>
+                <div class="option-button-text">dismissible</div>
               </button>
               <button class="btn btn-outline-secondary" (click)="removeAll()">remove all</button>
             </div>

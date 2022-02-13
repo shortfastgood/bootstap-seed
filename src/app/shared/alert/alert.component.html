@@ -1,4 +1,4 @@
 <div class="{{data.class}}" role="alert">
   <span class="alert-text">{{data.body}}</span>
-  <button *ngIf="dismissable" type="button" class="close" (click)="dismissAlert(id)"><span>&times;</span></button>
+  <button *ngIf="dismissible" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="dismissAlert(id)"></button>
 </div>

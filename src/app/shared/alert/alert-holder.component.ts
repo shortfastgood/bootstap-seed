@@ -1,7 +1,7 @@
-import {Component, ComponentFactoryResolver, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild} from '@angular/core';
+import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild} from '@angular/core';
 
 import {AlertDirective} from './alert-directive';
-import {ALERT_LOOP_DEFAULT_DELAY, ALERT_LOOP_RESET_VALUE, AnyAlertComponent, AnyAlertItem} from './alert';
+import {ALERT_LOOP_DEFAULT_DELAY, ALERT_LOOP_RESET_VALUE, AnyAlertItem} from './alert';
 
 @Component({
   selector: 'app-alert-holder',
@@ -19,18 +19,15 @@ export class AlertHolderComponent implements OnChanges, OnDestroy, OnInit {
 
   @Input() delay = ALERT_LOOP_DEFAULT_DELAY;
 
-  @Input() optionDismissable: boolean;
+  @Input() optionDismissible: boolean;
 
   @Input() items: AnyAlertItem[];
 
   interval: any;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
     for (const propName in changes) {
-      if ((propName === 'optionDismissable' || propName === 'currentAlertIndex') && !changes[propName].firstChange) {
+      if ((propName === 'optionDismissible' || propName === 'currentAlertIndex') && !changes[propName].firstChange) {
         this.reset();
       } else if (propName === 'delay' && !changes[propName].firstChange) {
         this.delay = changes[propName].currentValue;
@@ -47,14 +44,12 @@ export class AlertHolderComponent implements OnChanges, OnDestroy, OnInit {
     this.currentAlertIndex = (this.currentAlertIndex + 1) % this.items.length;
     const alertItem = this.items[this.currentAlertIndex];
 
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(alertItem.component);
-
     const viewContainerRef = this.appAlertHost.viewContainerRef;
     viewContainerRef.clear();
 
-    const componentRef = viewContainerRef.createComponent<AnyAlertComponent>(componentFactory);
+    const componentRef = viewContainerRef.createComponent(alertItem.component);
     componentRef.instance.data = alertItem.data;
-    componentRef.instance.dismissable = this.optionDismissable;
+    componentRef.instance.dismissible = this.optionDismissible;
     componentRef.instance.id = alertItem.id;
   }
 

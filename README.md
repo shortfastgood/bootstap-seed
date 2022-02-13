@@ -35,6 +35,11 @@ This section is a revisited version of the
 The alerts page uses the same principle as the advertisements to display messages and alerts 
 using as less space as possible.
 
-# BootstrapSeed 2.1
+# BootstrapSeed 2.0.1
 
+## Changes
+
+- Create dynamic components (alerts) without ComponentFactoryResolver (deprecated in Angular since 13)
+- Bootstrap with Popper 2.x
+- Angular 13.x
 

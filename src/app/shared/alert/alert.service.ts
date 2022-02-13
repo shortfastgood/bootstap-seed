@@ -14,52 +14,52 @@ export class AlertService {
   }
 
   public putAlert(
-    clazz= 'alert alert-light',
+    clazz= 'alert',
     message= 'no message provided for this alert',
     id= 'alert',
-    dismissable= false): void {
+    dismissible= false): void {
 
     let currentItem = this.alerts.find(alert => alert.id === id);
     if (!currentItem) {
-      currentItem = new AnyAlertItem(AlertComponent, {class: clazz, body: message}, id, dismissable);
+      currentItem = new AnyAlertItem(AlertComponent, {class: clazz, body: message}, id, dismissible);
       this.alerts.push(currentItem);
     } else {
       currentItem.data = {class: clazz, body: message};
-      currentItem.dismissable = dismissable;
+      currentItem.dismissible = dismissible;
       currentItem.id = id;
     }
   }
 
-  public putDarkAlert(message= 'unknown dark alert', id= 'dark', dismissable= false): void {
-    this.putAlert('alert alert-dark', message, id, dismissable);
+  public putDarkAlert(message= 'unknown dark alert', id= 'dark', dismissible= false): void {
+    this.putAlert('alert alert-dark alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putDangerAlert(message= 'unknown danger', id= 'danger', dismissable= false): void {
-    this.putAlert('alert alert-danger', message, id, dismissable);
+  public putDangerAlert(message= 'unknown danger', id= 'danger', dismissible= false): void {
+    this.putAlert('alert alert-danger alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putInfoAlert(message= 'unknown information', id= 'info', dismissable= false): void {
-    this.putAlert('alert alert-info', message, id, dismissable);
+  public putInfoAlert(message= 'unknown information', id= 'info', dismissible= false): void {
+    this.putAlert('alert alert-info alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putLightAlert(message= 'no message provided for this alert', id= 'light', dismissable= false): void {
-    this.putAlert('alert alert-light', message, id, dismissable);
+  public putLightAlert(message= 'no message provided for this alert', id= 'light', dismissible= false): void {
+    this.putAlert('alert alert-light alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putPrimaryAlert(message= 'no message provided for this alert', id= 'primary', dismissable= false): void {
-    this.putAlert('alert alert-primary', message, id, dismissable);
+  public putPrimaryAlert(message= 'no message provided for this alert', id= 'primary', dismissible= false): void {
+    this.putAlert('alert alert-primary alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putSecondaryAlert(message= 'no message provided for this alert', id= 'secondary', dismissable= false): void {
-    this.putAlert('alert alert-secondary', message, id, dismissable);
+  public putSecondaryAlert(message= 'no message provided for this alert', id= 'secondary', dismissible= false): void {
+    this.putAlert('alert alert-secondary alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putSuccessAlert(message= 'no message provided for this alert', id= 'success', dismissable= false): void {
-    this.putAlert('alert alert-success', message, id, dismissable);
+  public putSuccessAlert(message= 'no message provided for this alert', id= 'success', dismissible= false): void {
+    this.putAlert('alert alert-success alert-dismissible fade show', message, id, dismissible);
   }
 
-  public putWarningAlert(message= 'no message provided for this alert', id= 'warning', dismissable= false): void {
-    this.putAlert('alert alert-warning', message, id, dismissable);
+  public putWarningAlert(message= 'no message provided for this alert', id= 'warning', dismissible= false): void {
+    this.putAlert('alert alert-warning', message, id, dismissible);
   }
 
   public romoveAllAlerts(): void {

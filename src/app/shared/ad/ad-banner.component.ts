@@ -1,6 +1,6 @@
-import {Component, ComponentFactoryResolver, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AdDirective} from './ad-directive';
-import {AnyAdComponent, AnyAdItem} from './ad';
+import {AnyAdItem} from './ad';
 
 @Component({
   selector: 'app-ad-banner',
@@ -25,8 +25,6 @@ export class AdBannerComponent implements OnDestroy, OnInit{
 
   interval: any;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
-
   getAds(): void {
     this.interval = setInterval(() => {
       this.loadComponent();
@@ -37,12 +35,10 @@ export class AdBannerComponent implements OnDestroy, OnInit{
     this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;
     const adItem = this.ads[this.currentAdIndex];
 
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component);
-
     const viewContainerRef = this.appAdHost.viewContainerRef;
     viewContainerRef.clear();
 
-    const componentRef = viewContainerRef.createComponent<AnyAdComponent>(componentFactory);
+    const componentRef = viewContainerRef.createComponent(adItem.component);
     componentRef.instance.data = adItem.data;
   }
 

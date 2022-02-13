@@ -14,7 +14,7 @@ export class AlertComponent implements AnyAlertComponent {
 
   @Input() data: any;
 
-  @Input() public dismissable: boolean;
+  @Input() public dismissible: boolean;
 
   @Input() public id: string;
 

@@ -15,14 +15,14 @@ export const ALERT_LOOP_RESET_VALUE = -1;
  * @since 2.0
  */
 export interface AnyAlertComponent extends AnyComponent {
-  dismissable: boolean;
+  dismissible: boolean;
 }
 /**
- * @description builds a generic alert component. The dismissable property, if true, make possible, for the user, to dismiss the alert.
+ * @description builds a generic alert component. The dismissible property, if true, make possible, for the user, to dismiss the alert.
  * @since 2.0
  */
 export class AnyAlertItem extends AnyItem{
-  constructor(public component: Type<any>, public data: any, public id: string, public dismissable: boolean) {
+  constructor(public component: Type<any>, public data: any, public id: string, public dismissible: boolean) {
     super(component, data, id);
   }
 }
