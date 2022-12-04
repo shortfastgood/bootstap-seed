@@ -16,11 +16,11 @@ export class AlertAppComponent implements OnDestroy, OnInit {
 
   currentAlertIndex = ALERT_LOOP_RESET_VALUE;
 
-  delay = new FormControl();
+  delay = new FormControl(0);
 
   items: AnyAlertItem[];
 
-  message = new FormControl();
+  message = new FormControl('');
 
   optionDelay = ALERT_LOOP_DEFAULT_DELAY;
 

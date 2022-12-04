@@ -41,5 +41,6 @@ using as less space as possible.
 
 - Create dynamic components (alerts) without ComponentFactoryResolver (deprecated in Angular since 13)
 - Bootstrap with Popper 2.x
-- Angular 13.x
+- Angular 14.x
+- Electron 15.x
 
