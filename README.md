@@ -46,3 +46,7 @@ using as less space as possible.
 ## Changes
 - Angular 15.x
 
+# BootstrapSeed 2.0.3
+## Changes
+- Angular 16.x
+
