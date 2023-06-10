@@ -50,3 +50,12 @@ using as less space as possible.
 ## Changes
 - Angular 16.x
 
+# BootstrapSeed 2.0.4
+## Changes
+- @electron-forge 6.1.1
+- @popperjs/core 2.11.8
+- bootstrap 5.3.0
+- bootstrap-icons 1.10.5
+- rxjs 7.8.1
+- typescript 5.0.4
+
