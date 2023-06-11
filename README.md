@@ -59,3 +59,6 @@ using as less space as possible.
 - rxjs 7.8.1
 - typescript 5.0.4
 
+# BootstrapSeed 2.0.5
+## Changes
+fixed some vulnerabilities
