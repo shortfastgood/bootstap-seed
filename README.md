@@ -62,3 +62,7 @@ using as less space as possible.
 # BootstrapSeed 2.0.5
 ## Changes
 fixed some vulnerabilities
+
+# BootstrapSeed 2.0.6
+## Changes
+fixed some vulnerabilities
