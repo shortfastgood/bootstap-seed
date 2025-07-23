@@ -10,11 +10,13 @@ import {AnyAdComponent} from '../shared/ad/ad';
       <hr>
       <p><strong>Hire this hero today!</strong></p>
     </div>
-  `})
+  `,
+  standalone: false
+})
 export class HeroProfileComponent implements AnyAdComponent{
   @Input() data: any;
 
-  @Input() public dismissable: boolean;
+  @Input() public dismissable!: boolean;
 
-  @Input() public id: string;
+  @Input() public id!: string;
 }

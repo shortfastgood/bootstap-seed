@@ -5,11 +5,12 @@ import {AnyAdItem} from '../shared/ad/ad';
 @Component({
   selector: 'app-ad-app',
   styleUrls: ['./ad-app.component.css'],
-  templateUrl: './ad-app.component.html'
+  templateUrl: './ad-app.component.html',
+  standalone: false
 })
 export class AdAppComponent implements OnInit {
 
-  ads: AnyAdItem[];
+  ads!: AnyAdItem[];
 
   constructor(private adService: AdService) {}
 

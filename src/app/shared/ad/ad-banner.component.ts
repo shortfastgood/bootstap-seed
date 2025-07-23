@@ -13,13 +13,14 @@ import {AnyAdItem} from './ad';
     <div class="ad-banner">
       <ng-template appAdHost></ng-template>
     </div>
-  `
+  `,
+  standalone: false
 })
 export class AdBannerComponent implements OnDestroy, OnInit{
 
-  @ViewChild(AdDirective, {static: true}) appAdHost: AdDirective;
+  @ViewChild(AdDirective, {static: true}) appAdHost!: AdDirective;
 
-  @Input() ads: AnyAdItem[];
+  @Input() ads!: AnyAdItem[];
 
   currentAdIndex = -1;
 

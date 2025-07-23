@@ -9,19 +9,20 @@ import {ALERT_LOOP_DEFAULT_DELAY, ALERT_LOOP_RESET_VALUE, AnyAlertItem} from './
   template: `
     <div class="alert-holder">
       <ng-template appAlertHost></ng-template>
-    </div>`
+    </div>`,
+  standalone: false
 })
 export class AlertHolderComponent implements OnChanges, OnDestroy, OnInit {
 
-  @ViewChild(AlertDirective, {static: true}) appAlertHost: AlertDirective;
+  @ViewChild(AlertDirective, {static: true}) appAlertHost!: AlertDirective;
 
   @Input() currentAlertIndex = ALERT_LOOP_RESET_VALUE;
 
   @Input() delay = ALERT_LOOP_DEFAULT_DELAY;
 
-  @Input() optionDismissible: boolean;
+  @Input() optionDismissible!: boolean;
 
-  @Input() items: AnyAlertItem[];
+  @Input() items!: AnyAlertItem[];
 
   interval: any;
 

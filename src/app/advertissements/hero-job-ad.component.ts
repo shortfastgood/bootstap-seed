@@ -7,11 +7,13 @@ import {AnyAdComponent} from '../shared/ad/ad';
       <h4 class="alert-heading">{{data.headline}}</h4>
       {{data.body}}
     </div>
-`})
+`,
+  standalone: false
+})
 export class HeroJobAdComponent implements AnyAdComponent {
   @Input() data: any;
 
-  @Input() public dismissable: boolean;
+  @Input() public dismissable!: boolean;
 
-  @Input() public id: string;
+  @Input() public id!: string;
 }

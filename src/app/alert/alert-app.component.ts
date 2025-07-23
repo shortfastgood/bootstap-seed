@@ -10,7 +10,8 @@ import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-alerts',
   styleUrls: ['./alert-app.component.css'],
-  templateUrl: './alert-app.component.html'
+  templateUrl: './alert-app.component.html',
+  standalone: false
 })
 export class AlertAppComponent implements OnDestroy, OnInit {
 
@@ -18,60 +19,60 @@ export class AlertAppComponent implements OnDestroy, OnInit {
 
   delay = new FormControl(0);
 
-  items: AnyAlertItem[];
+  items!: AnyAlertItem[];
 
   message = new FormControl('');
 
   optionDelay = ALERT_LOOP_DEFAULT_DELAY;
 
-  optionDismissible: boolean;
+  optionDismissible!: boolean;
 
-  subscription: Subscription;
+  subscription!: Subscription;
 
   constructor(private alertService: AlertAppService, private broadcastService: BroadcastService) {}
 
   addDarkAlert(): void {
-    this.alertService.putDarkAlert(this.message.value);
+    this.alertService.putDarkAlert(this.message.value || '');
     this.reset();
   }
 
   addDangerAlert(): void {
-    this.alertService.putDangerAlert(this.message.value);
+    this.alertService.putDangerAlert(this.message.value || '');
     this.reset();
   }
 
   addInfoAlert(): void {
-    this.alertService.putInfoAlert(this.message.value);
+    this.alertService.putInfoAlert(this.message.value || '');
     this.reset();
   }
 
   addLightAlert(): void {
-    this.alertService.putLightAlert(this.message.value);
+    this.alertService.putLightAlert(this.message.value || '');
     this.reset();
   }
 
   addPrimaryAlert(): void {
-    this.alertService.putPrimaryAlert(this.message.value);
+    this.alertService.putPrimaryAlert(this.message.value || '');
     this.reset();
   }
 
   addSecondaryAlert(): void {
-    this.alertService.putSecondaryAlert(this.message.value);
+    this.alertService.putSecondaryAlert(this.message.value || '');
     this.reset();
   }
 
   addSuccessAlert(): void {
-    this.alertService.putSuccessAlert(this.message.value);
+    this.alertService.putSuccessAlert(this.message.value || '');
     this.reset();
   }
 
   addWarningAlert(): void {
-    this.alertService.putWarningAlert(this.message.value);
+    this.alertService.putWarningAlert(this.message.value || '');
     this.reset();
   }
 
   delayChanged(): void {
-    if (this.delay.valid) {
+    if (this.delay.valid && this.delay.value !== null) {
       this.optionDelay = this.delay.value;
     }
   }

@@ -6,7 +6,8 @@ import {BroadcastService} from '../broadcast.service';
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.css']
+  styleUrls: ['./alert.component.css'],
+  standalone: false
 })
 export class AlertComponent implements AnyAlertComponent {
 
@@ -14,9 +15,9 @@ export class AlertComponent implements AnyAlertComponent {
 
   @Input() data: any;
 
-  @Input() public dismissible: boolean;
+  @Input() public dismissible!: boolean;
 
-  @Input() public id: string;
+  @Input() public id!: string;
 
   constructor(private broadcastService: BroadcastService) {}
 

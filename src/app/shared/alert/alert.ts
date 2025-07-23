@@ -22,7 +22,12 @@ export interface AnyAlertComponent extends AnyComponent {
  * @since 2.0
  */
 export class AnyAlertItem extends AnyItem{
-  constructor(public component: Type<any>, public data: any, public id: string, public dismissible: boolean) {
+  constructor(
+    public override component: Type<any>,
+    public override data: any,
+    public override id: string,
+    public dismissible: boolean
+  ) {
     super(component, data, id);
   }
 }

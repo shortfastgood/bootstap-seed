@@ -21,7 +21,12 @@ export interface AnyAdComponent extends AnyComponent {
  * @since 2.0
  */
 export class AnyAdItem extends AnyItem{
-  constructor(public component: Type<any>, public data: any, public id: string, public dismissable: boolean) {
+  constructor(
+    public override component: Type<any>,
+    public override data: any,
+    public override id: string,
+    public dismissable: boolean
+  ) {
     super(component, data, id);
   }
 }
