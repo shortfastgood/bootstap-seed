@@ -57,7 +57,7 @@
     "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "electron": "27.0.2",
+    "electron": "28.3.2",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-jsdoc": "latest",
