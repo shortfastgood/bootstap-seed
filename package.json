@@ -15,7 +15,7 @@
     "mac:pack": "npm run mac:build && electron-packager . --overwrite",
     "mac:popper": "cp node_modules/@popperjs/core/dist/umd/popper.js src/assets/js",
     "win:build": "ng build --base-href ./ && xcopy /S /Y src\\electron\\* dist",
-    "win:electron": "npm run win:build && electron src/electron.js",
+    "win:electron": "npm run win:build && electron dist/electron.js",
     "win:pack": "npm run win:build && electron-packager . --overwrite",
     "win:popper": "copy node_modules\\@popperjs\\core\\dist\\umd\\popper.js src\\assets\\js",
     "package": "electron-forge package",
