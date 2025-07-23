@@ -66,3 +66,7 @@ fixed some vulnerabilities
 # BootstrapSeed 2.0.6
 ## Changes
 fixed some vulnerabilities
+
+# BootstrapSeed 2.0.7
+## Changes
+upgrade to Angular 19.x LTS
