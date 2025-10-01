@@ -70,3 +70,16 @@ fixed some vulnerabilities
 # BootstrapSeed 2.0.7
 ## Changes
 upgrade to Angular 19.x LTS
+
+# BootstrapSeed 2.0.8
+## Changes
+- Upgraded Angular 19.x toolchain to the 19.2.x patchline and aligned the CLI/compiler/devkit to be consistent.
+- Updated `@angular-devkit/build-angular` to a 19.2.x patch, and bumped other build/dev tooling where needed.
+- Upgraded Bootstrap to 5.3.8 and aligned small libraries (rxjs/tslib/zone.js) to current safe patch versions.
+- Bumped Electron to 38.2.0 to address a security advisory related to ASAR integrity (requires runtime testing).
+- Ran `npm audit` and applied available automatic fixes; resolved transitive vulnerabilities (axios/tmp/@inquirer/editor) where possible.
+- Note: peer-dependency resolution was allowed with `--legacy-peer-deps` during install to complete the upgrade; please run a full build and smoke tests locally to validate runtime behavior.
+
+## Next steps / recommendations
+- Run the app and test both the web and electron flows (build, start, and package commands) to validate behavior after the Electron major bump.
+- Consider planning a focused migration to Angular 20 and updating electron-forge/eslint to their latest majors in a separate branch when you're ready.
