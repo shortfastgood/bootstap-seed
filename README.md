@@ -83,3 +83,12 @@ upgrade to Angular 19.x LTS
 ## Next steps / recommendations
 - Run the app and test both the web and electron flows (build, start, and package commands) to validate behavior after the Electron major bump.
 - Consider planning a focused migration to Angular 20 and updating electron-forge/eslint to their latest majors in a separate branch when you're ready.
+
+# BootstrapSeed 2.0.9
+## Changes
+- Updated Angular to 19.2.15
+- Updated bootstrap-icons to 1.13.1
+- Updated rxjs to ~7.8.2
+- Updated typescript to ~5.5.4
+- Updated @angular-devkit/build-angular to ^19.2.17
+- Applied security upgrades to mitigate vulnerabilities
